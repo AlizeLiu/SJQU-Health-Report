@@ -22,6 +22,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install GenchAPI
     - name: Run with VPN
+      env:
+        username: ${{ secrets.username }}
+        password: ${{ secrets.password }}
       uses: zhangt2333/actions-easyconnect@main
       with:
         CLI_OPTS: -d 'https://vpn.gench.edu.cn' -u ${{ secrets.USERNAME }} -p ${{ secrets.PASSWORD }}
@@ -29,4 +32,4 @@ jobs:
         SLEEP_AFTER_LOGIN: 1
         EXPECTED_EXIT_CODE: 66
         SCRIPT: |
-          python main.py ${{ secrets.USERNAME }} {{ secrets.PASSWORD }}
+          python main.py
