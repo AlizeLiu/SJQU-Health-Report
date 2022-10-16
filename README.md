@@ -1,6 +1,11 @@
 # SJQU-Health-Report
 建桥i健康自动打卡
 
+## 特性
+- 无需服务器
+- 永久免费
+- 内网打卡，安全快速
+
 ## 使用方法
 1. 请 [Fork](https://github.com/missuo/bojj1/SJQU-Health-Report/fork) 本仓库。
 
