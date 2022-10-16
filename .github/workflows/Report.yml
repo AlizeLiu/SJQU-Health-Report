@@ -24,9 +24,9 @@ jobs:
     - name: Run with VPN
       uses: zhangt2333/actions-easyconnect@main
       with:
-        CLI_OPTS: -d 'https://vpn.gench.edu.cn' -u ${{ secrets.username }} -p ${{ secrets.password }}
+        CLI_OPTS: -d 'https://vpn.gench.edu.cn' -u ${{ secrets.USERNAME }} -p ${{ secrets.PASSWORD }}
         RETRY: 2
         SLEEP_AFTER_LOGIN: 1
         EXPECTED_EXIT_CODE: 66
         SCRIPT: |
-          python main.py ${{ secrets.username }} {{ secrets.password }}
+          python main.py ${{ secrets.USERNAME }} {{ secrets.PASSWORD }}
